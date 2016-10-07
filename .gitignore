@@ -1,0 +1,15 @@
+# Logs
+logs
+*.log
+
+# Python bytecode
+*.pyc
+
+# Idea files
+.idea
+
+# Ignore auth.json
+auth.json
+
+# Ignore generated file
+revealed_msg.txt

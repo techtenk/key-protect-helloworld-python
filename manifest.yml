@@ -1,0 +1,6 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  name: bluemix-key-protect-sample
+  memory: 128M
