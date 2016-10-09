@@ -4,11 +4,11 @@ This sample app demonstrates how to use the IBM Key Protect service for Bluemix.
 
 This sample app shows how to directly interact with the service by using API calls to create, retrieve, and delete secrets. lchemy-Key-Protect/bluemix-public-samples)
 
-## How it works
+## <a name="howto"></a> How it works
 
 1.  Secrets are added to your Key Protect instance when the sample app starts running. In your normal development workflow, the secrets would already be in the service and the only thing provided would be the secret references.
 
-2.  Provide the required authentication information, 
+2.  Provide the required authentication information,
 
 3.  Push the app into Bluemix
 
@@ -17,16 +17,6 @@ This sample app shows how to directly interact with the service by using API cal
 5.  Once you click the button, wait a few seconds for the keys to be retrieved from Key Protect.  The app uses the keys to decrypt the `secret message.txt` file.
 
 6.  The app reveals the unencrypted message in the UI.  You may also view the message in the `revealed_msg.txt` file, which is created after pressing the button.
-
-### Code structure
-The files below are used by the sample app to demonstrate how the service works. They are for the purposes of the sample app only, as the contents would generally be too sensitive to store openly.
-
-| File | Description |
-|------|--------|
-| encryption_keys.json | Contains the keys used for encryption. Encryption keys can consist of a phrase or randomly generated value of anything desired. Encryption keys can be uploaded directly into the Key Protect service by a privileged user.|
-| iv.txt | Contains the initialization vector used in the AES algorithm to encrypt the secret message. The contents is usually directly uploaded into Key Protect service by a privileged user. |
-| secret message.txt | Holds the message that was encrypted using AES with the `encryption_key.json` and `iv.txt` files. |
-
 
 ## Running the app on Bluemix
 1. Create a Bluemix account. [Sign up][bluemix_signup_url] in Bluemix or use an existing account.
@@ -101,6 +91,8 @@ The files below are used by the sample app to demonstrate how the service works.
   cf push
   ```
 
+9. Refer to [this section](#howto) to decrypt the message.
+
 ## Running the sample applications locally
 
 1. If you do not already have a Bluemix account, [sign up for one][bluemix_signup_url].
@@ -110,7 +102,7 @@ The files below are used by the sample app to demonstrate how the service works.
 3. In terminal, clone the app to your local environment with the following command.
 
   ```sh
-  git clone git@github.com/IBM-Bluemix/key-protect-helloworld-python.git (should be replaced by bluemix repo)
+  git clone git@github.com/IBM-Bluemix/key-protect-helloworld-python.git
   ```
 
 4. In the newly created directory, install the required dependencies.
@@ -166,14 +158,26 @@ The files below are used by the sample app to demonstrate how the service works.
 8. Run the `welcome.py` code.
 
   ```sh
-  ./welcome.py
+  python ./welcome.py
   ```
-[cloud_foundry]:https://github.com/cloudfoundry/cli
 
-[bluemix_signup_url]: https://console.ng.bluemix.net/registration/
+9. The example is running on http://0.0.0.0:5001/. Refer to [this section](#howto) to decrypt the message.
+
+## Code structure
+The files below are used by the sample app to demonstrate how the service works. They are for the purposes of the sample app only, as the contents would generally be too sensitive to store openly.
+
+| File | Description |
+|------|--------|
+| encryption_keys.json | Contains the keys used for encryption. Encryption keys can consist of a phrase or randomly generated value of anything desired. Encryption keys can be uploaded directly into the Key Protect service by a privileged user.|
+| iv.txt | Contains the initialization vector used in the AES algorithm to encrypt the secret message. The contents is usually directly uploaded into Key Protect service by a privileged user. |
+| secret message.txt | Holds the message that was encrypted using AES with the `encryption_key.json` and `iv.txt` files. |
+| [welcome.py](welcome.py) | Contains the code decrypting the secret message. |
 
 ## License
 
   This sample code is licensed under Apache 2.0. See the [license file](LICENSE.txt) for more information.
 
   This sample code uses jQuery, distributed under MIT license.
+
+[cloud_foundry]:https://github.com/cloudfoundry/cli
+[bluemix_signup_url]: https://console.ng.bluemix.net/registration/
