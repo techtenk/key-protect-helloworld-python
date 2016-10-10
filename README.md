@@ -158,7 +158,7 @@ This sample app shows how to directly interact with the service by using API cal
 8. Run the `welcome.py` code.
 
   ```sh
-  python ./welcome.py
+  python welcome.py
   ```
 
 9. The example is running on http://0.0.0.0:5001/. Refer to [this section](#howto) to decrypt the message.
