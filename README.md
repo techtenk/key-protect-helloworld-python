@@ -2,7 +2,7 @@
 
 This sample app demonstrates how to use the IBM Key Protect service for Bluemix. A secret message has been encrypted for you in the `secret message.txt` file. You can decrypt the secret message using secrets stored in your Key Protect service. Once you retrieve the secrets, the AES 256 encrypted secret message is revealed. To find out more about how the service works, go to the [Bluemix docs](https://console.ng.bluemix.net/docs/services/keymgmt/index.html).
 
-This sample app shows how to directly interact with the service by using API calls to create, retrieve, and delete secrets. lchemy-Key-Protect/bluemix-public-samples)
+This sample app shows how to directly interact with the service by using API calls to create, retrieve, and delete secrets.
 
 ## <a name="howto"></a> How it works
 
