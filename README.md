@@ -4,6 +4,10 @@ This sample app demonstrates how to use the IBM Key Protect service for Bluemix.
 
 This sample app shows how to directly interact with the service by using API calls to create, retrieve, and delete secrets.
 
+## Prerequisites
+  1. Python `2.7.x`
+  2. pip `1.5.x`
+
 ## <a name="howto"></a> How it works
 
 1.  Secrets are added to your Key Protect instance when the sample app starts running. In your normal development workflow, the secrets would already be in the service and the only thing provided would be the secret references.
