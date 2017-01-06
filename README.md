@@ -55,7 +55,7 @@ This sample app shows how to directly interact with the service by using API cal
 6. Create an instance of the Key Protect service in Bluemix.
 
   ```sh
-  cf create-service ibm_key_management LITE sample-key-protect-service
+  cf create-service ibm_key_management TieredPricing sample-key-protect-service
   ```
 
 7. Edit the `auth.json` file with your Bluemix user information.
@@ -125,7 +125,7 @@ This sample app shows how to directly interact with the service by using API cal
 6. Create an instance of the Key Protect service in Bluemix.
 
   ```sh
-  cf create-service ibm_key_management LITE sample-key-protect-service
+  cf create-service ibm_key_management TieredPricing sample-key-protect-service
   ```
 
 7. Edit the `auth.json` file with your Bluemix user information.
