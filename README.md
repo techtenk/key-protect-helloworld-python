@@ -177,6 +177,10 @@ The files below are used by the sample app to demonstrate how the service works.
 | secret message.txt | Holds the message that was encrypted using AES with the `encryption_key.json` and `iv.txt` files. |
 | [welcome.py](welcome.py) | Contains the code decrypting the secret message. |
 
+## Contribute
+
+If you find a bug, please report it via the [Issues section][issues_url]. You may also fork the project and submit a pull request in order to fix any open issues. We are happy to accept external contributions. 
+
 ## License
 
   This sample code is licensed under Apache 2.0. See the [license file](LICENSE.txt) for more information.
@@ -185,3 +189,4 @@ The files below are used by the sample app to demonstrate how the service works.
 
 [cloud_foundry]:https://github.com/cloudfoundry/cli
 [bluemix_signup_url]: https://console.ng.bluemix.net/registration/
+[issues_url]: https://github.com/ibm-bluemix/key-protect-helloworld-python/issues
