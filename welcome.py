@@ -94,7 +94,6 @@ def decrypt_message():
     print('\n\nGet Secrets ', file=sys.stderr)
     print('\nIV_Url: '+iv_url, file=sys.stderr)
     print('\nKey_Url: '+key_url, file=sys.stderr)
-    print('\nHeaders: '+str(headers), file=sys.stderr)
 
     # get keys from Key Protect
     try:
@@ -243,7 +242,6 @@ def get_key_ids():
     url, headers = setup()
     print('\n\nPost Secrets', file=sys.stderr)
     print('\nUrl: '+url, file=sys.stderr)
-    print('\nHeaders: '+str(headers), file=sys.stderr)
 
     key, iv = getKeyAndIV()
 
