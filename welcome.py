@@ -67,9 +67,9 @@ def getKeyAndIV():
 def setup():
     cred = json.load(open('auth.json'))
     url = 'https://' + cred['host'] + route_secrets
-    token = cred['token']
-    space = cred['space']
-    org = cred['org']
+    token = cred['token'].strip()
+    space = cred['space'].strip()
+    org = cred['org'].strip()
     headers = {
         'Content-Type': 'application/json',
         authorization_header_field: token.encode('UTF-8'),
