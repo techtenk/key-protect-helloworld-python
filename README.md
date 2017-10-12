@@ -29,65 +29,66 @@ This sample app shows how to directly interact with the service by using API cal
 
 3. In a terminal window, clone the app to your local environment using the following command.
 
-  ```
-  git clone git@github.com/IBM-Bluemix/key-protect-helloworld-python.git
-  ```
+```sh
+git clone git@github.com/IBM-Bluemix/key-protect-helloworld-python.git
+```
 
 
 4. In the newly created directory, edit the `manifest.yml` file and change the `<application-name>` to something unique.
 
-  ```none
-    applications:
-    - path: .
-      memory: 256M
-      instances: 1
-      name: <application-name>
-      memory: 128M
-  ```
+```yaml
+  applications:
+  - path: .
+    memory: 256M
+    instances: 1
+    name: <application-name>
+    memory: 128M
+```
   The name you use determines your application URL initially, e.g. `<application-name>.mybluemix.net`.
 
 5. Run the **login** command to connect to Bluemix.
-  ```sh
-  cf api https://api.ng.bluemix.net
-  cf login -u <your_user_ID>
-  ```
+  
+```sh
+cf api https://api.ng.bluemix.net
+cf login -u <your_user_ID>
+```
 
 6. Create an instance of the Key Protect service in Bluemix.
 
-  ```sh
-  cf create-service ibm_key_management TieredPricing sample-key-protect-service
-  ```
+```sh
+cf create-service ibm_key_management TieredPricing sample-key-protect-service
+```
 
 7. Edit the `auth.json` file with your Bluemix user information.
 
-  ```javascript
-  {
-      "host": "ibm-key-protect.edge.bluemix.net",
-      "token": "Bearer <your token>",
-      "org": "<your Bluemix organization GUID>",
-      "space": "<your Bluemix space GUID>"
-  }
-  ```
+```javascript
+{
+    "host": "ibm-key-protect.edge.bluemix.net",
+    "token": "Bearer <your token>",
+    "org": "<your Bluemix organization GUID>",
+    "space": "<your Bluemix space GUID>"
+}
+```
 
   Fill in the blank values. You can retrieve these values using the Cloud Foundry CLI as described below.
 
   1. For `token`, run the following command to get your authorization token.
 
-    ```sh
-    cf oauth-token
-    ```
+  ```sh
+  cf oauth-token
+  ```
 
   2. For `org`, run the following command to get your Bluemix organization GUID. If you need to look up the name of your organization, you can run `cf target` first.
 
-    ```sh
-    cf org <your_organization_name> --guid
-    ```
+  ```sh
+  cf org <your_organization_name> --guid
+  ```
 
   3. For `space`, run the following command to get your Bluemix space GUID. If you need to look up the name of your space, you can run `cf target` first.
 
-    ```sh
-    cf space <your_space_name> --guid
-    ```
+  ```sh
+  cf space <your_space_name> --guid
+  ```
 
 8. Push the sample app to Bluemix.
 
@@ -105,65 +106,65 @@ This sample app shows how to directly interact with the service by using API cal
 
 3. In terminal, clone the app to your local environment with the following command.
 
-  ```sh
-  git clone git@github.com/IBM-Bluemix/key-protect-helloworld-python.git
-  ```
+```sh
+git clone git@github.com/IBM-Bluemix/key-protect-helloworld-python.git
+```
 
 4. In the newly created directory, install the required dependencies.
 
-  ```sh
-  pip install -r requirements.txt
-  ```
+```sh
+pip install -r requirements.txt
+```
 
 5. Run the **login** command to connect to Bluemix in the command line tool.
 
-  ```sh
-  cf api https://api.ng.bluemix.net
-  cf login -u <your user ID>
-  ```
+```sh
+cf api https://api.ng.bluemix.net
+cf login -u <your user ID>
+```
 
 6. Create an instance of the Key Protect service in Bluemix.
 
-  ```sh
-  cf create-service ibm_key_management TieredPricing sample-key-protect-service
-  ```
+```sh
+cf create-service ibm_key_management TieredPricing sample-key-protect-service
+```
 
 7. Edit the `auth.json` file with your Bluemix user information.
 
-  ```javascript
-  {
-      "host": "ibm-key-protect.edge.bluemix.net",
-      "token": "",
-      "org": "",
-      "space": ""
-  }
-  ```
+```javascript
+{
+    "host": "ibm-key-protect.edge.bluemix.net",
+    "token": "",
+    "org": "",
+    "space": ""
+}
+```
 
   Fill in the blank values. You can retrieve these values using the Cloud Foundry CLI as described below.
 
   1. For `token`, run the following command to get your authorization token.
 
-    ```sh
-    cf oauth-token
-    ```
+  ```sh
+  cf oauth-token
+  ```
 
   2. For `org`, run the following command to get your Bluemix organization GUID. If you need to look up the name of your organization, you can run `cf target` first.
 
-    ```sh
-    cf org <your organization name> --guid
-    ```
+  ```sh
+  cf org <your organization name> --guid
+  ```
 
   3. For `space`, run the following command to get your Bluemix space GUID. If you need to look up the name of your space, you can run `cf target` first.
 
-    ```sh
-    cf space <your space name> --guid
-    ```
+  ```sh
+  cf space <your space name> --guid
+  ```
 
 8. Run the `welcome.py` code.
 
-  ```sh
-  python welcome.py
-  ```
+```sh
+python welcome.py
+```
 
 9. The example is running on http://0.0.0.0:5001/. Refer to [this section](#howto) to decrypt the message.
 
