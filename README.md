@@ -184,7 +184,7 @@ If you find a bug, please report it via the [Issues section][issues_url]. You ma
 
 ## License
 
-  This sample code is licensed under Apache 2.0. See the [license file](LICENSE.txt) for more information.
+  This sample code is licensed under Apache 2.0. See the [license file](LICENSE) for more information.
 
   This sample code uses jQuery, distributed under MIT license.
 
