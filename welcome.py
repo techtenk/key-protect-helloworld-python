@@ -194,7 +194,7 @@ def decrypt_message():
               file=sys.stderr)
 
         if delete_iv_status >= 400:
-            raise Exception(delete_iv_status, delete_iv_reqeust.json())
+            raise Exception(delete_iv_status, delete_iv_request.json())
 
         print('\n\nDelete Key Secret', file=sys.stderr)
         delete_key_request = requests.delete(key_url, headers=headers)
@@ -208,7 +208,7 @@ def decrypt_message():
               file=sys.stderr)
 
         if delete_key_status >= 400:
-            raise Exception(delete_key_status, delete_key_reqeust.json())
+            raise Exception(delete_key_status, delete_key_request.json())
     except requests.exceptions.RequestException as e:
         print('\n\n'+str(e), file=sys.stderr)
         err_msg = 'cannot delete key. Check auth.json file'
